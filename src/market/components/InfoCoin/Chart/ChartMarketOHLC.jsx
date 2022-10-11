@@ -147,7 +147,7 @@ export const ChartMarketOHLC = ({ dataOHLC }) => {
   return (
     <ReactECharts
           option={options}
-          style = { { height : '600px' ,  width : '100%' } }
+          style = { { height : '500px' ,  width : 'auto' } }
           notMerge={true}
           lazyUpdate={true}
           theme={"theme_name"}

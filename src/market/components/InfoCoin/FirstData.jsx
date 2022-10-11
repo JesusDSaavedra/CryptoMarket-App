@@ -47,6 +47,9 @@ export const FirstData = ({info}) => {
                         className='pe-2' 
                     />
                     {
+                        ( info.porcentage24h === undefined ) ?
+                        ''
+                        :
                         `${new Intl.NumberFormat('en-EN').format(info.porcentage24h.toFixed(1))}%`
                     }
                 </small>

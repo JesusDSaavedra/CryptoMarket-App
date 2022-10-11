@@ -6,7 +6,7 @@ export const Porcentage = ({info}) => {
     const { isMode } = useCoinsStore();
 
     return (
-        <div className="mt-3 p-5">
+        <div className="mt-3 table-responsive-sm">
             <table className={`table ${(isMode ? 'table-dark' : 'table-light')} table-striped table-bordered table-sm`}>
                 <thead>
                     <tr>

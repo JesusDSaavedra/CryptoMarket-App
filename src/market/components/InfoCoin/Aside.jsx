@@ -16,15 +16,13 @@ export const Aside = ({info}) => {
         return newDate[0]
     }
 
-    // console.log(valueCurrencyInput);
-
     const valueCoin = valueCoinInput * info.priceConverter;
     const valueCurrency = valueCurrencyInput / info.priceConverter;
 
 
 
   return (
-    <aside className="col-md-4 px-4">
+    <aside className="col-md-4">
         <div className="row">
             <div className="col-md-12">
                 <div className={`card mb-2 ${(isMode ? 'text-bg-dark border border-secondary border-1' : 'border-1')}`}
@@ -66,7 +64,7 @@ export const Aside = ({info}) => {
                         </div>
                         <div className="mt-2">
                             <small className="text-uppercase text-muted fw-semibold">
-                                {`1 ${info.symbol} = ${new Intl.NumberFormat('en-EN', { maximumSignificantDigits: 20 }).format(info.priceConverter)} ${ isCurrencyConverter === 'eur' ? '€' : isCurrencyConverter === 'usd' ? '$' : `${isCurrencyConverter}`}`}
+                                {`1 ${info.symbol} = ${ isCurrencyConverter === 'eur' ? '€' : isCurrencyConverter === 'usd' ? '$' : `${isCurrencyConverter} `}${new Intl.NumberFormat('en-EN', { maximumSignificantDigits: 20 }).format(info.priceConverter)} `}
                             </small>
                         </div>
                     </div>
@@ -75,7 +73,7 @@ export const Aside = ({info}) => {
         </div>
         <div className="row">
             <div className="col-md-12">
-                <div className={`card p-2 ${(isMode ? 'text-bg-dark border border-secondary border-1' : 'border-1')}`}
+                <div className={`card p-1 ${(isMode ? 'text-bg-dark border border-secondary border-1' : 'border-1')}`}
                      style={ isMode ? {background: '#212529'} : {background: '#f3f4f6'}}
                 >
                     <div className="card-body ">

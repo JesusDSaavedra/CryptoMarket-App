@@ -5,7 +5,7 @@ export const infoCoinSlice = createSlice({
     initialState: {
         isChartTime: '7',
         isChart: 'line',
-        isCurrencyConverter: 'eur',
+        isCurrencyConverter: 'usd',
     },
     reducers: {
         chartTime: ( state, { payload } ) => {

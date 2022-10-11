@@ -41,9 +41,9 @@ export const Chart = ({info}) => {
 
     return (
         <div className="row">
-            <div className="col-md-12 py-5">
-                <div className='d-flex justify-content-between align-items-center'>
-                    <span className={`ps-5 fw-semibold ${(isMode ? 'text-white' : 'text-black')}`}>
+            <div className="col-md-12 py-3">
+                <div className="p-2  text-center">
+                    <span className={`fw-semibold ${(isMode ? 'text-white' : 'text-black')}`}>
                         {
                             `${info.name} Price Chart `
                         }
@@ -53,7 +53,9 @@ export const Chart = ({info}) => {
                             }
                         </span>
                     </span>
-                    <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
+                </div>
+                <div className='text-end py-2'>
+                    <div className="btn-group btn-group-sm" role="group" aria-label="Small button group">
                         <input 
                             type="radio" 
                             className="btn-check" 
@@ -114,20 +116,6 @@ export const Chart = ({info}) => {
                             type="radio" 
                             className="btn-check" 
                             name="btnradio" 
-                            id="btnradio5" 
-                            autoComplete="off" 
-                            checked={( typeChartTime === "90")}
-                            onClick={ e => { onChangeChartTime('90') }}
-                        >
-                        </input>
-                        <label className={`btn ${(isMode ? 'btn-outline-light' : 'btn-outline-dark')} btn-sm`} htmlFor="btnradio5">
-                            90d
-                        </label>
-
-                        <input 
-                            type="radio" 
-                            className="btn-check" 
-                            name="btnradio" 
                             id="btnradio6" 
                             autoComplete="off" 
                             checked={( typeChartTime === "180")}
@@ -152,6 +140,10 @@ export const Chart = ({info}) => {
                             1y
                         </label>
 
+                    </div>
+                </div>
+                <div className="text-end">
+                    <div className="d-inline">
                         <input 
                             type="radio" 
                             className="btn-check" 
@@ -166,43 +158,43 @@ export const Chart = ({info}) => {
                             Max
                         </label>
                     </div>
-                </div>
-                <div className='text-end py-2'>
-                    <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
-                        
-                        <input 
-                            type="radio" 
-                            className="btn-check"
-                            name="btnradio2" 
-                            id="btnradio9" 
-                            autoComplete="off" 
-                            checked={( typeChart === "line")}
-                            onClick={ e => { onChangeChart('line') }} 
-                        ></input>
-                        <label className={`btn ${( isMode ? 'btn-outline-light' : 'btn-outline-dark')} btn-sm`} htmlFor="btnradio9">
-                            <FontAwesomeIcon icon={ faChartLine } />
-                        </label>
+                    <div className='d-inline ms-2'>
+                        <div className="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            
+                            <input 
+                                type="radio" 
+                                className="btn-check"
+                                name="btnradio2" 
+                                id="btnradio9" 
+                                autoComplete="off" 
+                                checked={( typeChart === "line")}
+                                onClick={ e => { onChangeChart('line') }} 
+                            ></input>
+                            <label className={`btn ${( isMode ? 'btn-outline-light' : 'btn-outline-dark')} btn-sm`} htmlFor="btnradio9">
+                                <FontAwesomeIcon icon={ faChartLine } />
+                            </label>
 
-                        
-                        <input 
-                            type="radio" 
-                            className="btn-check"
-                            name="btnradio2" 
-                            id="btnradio10" 
-                            autoComplete="off" 
-                            checked={( typeChart === "candlestick")}
-                            onClick={ e => { onChangeChart('candlestick') }}
-                        ></input>
-                        <label className={`btn ${(isMode ? 'btn-outline-light' : 'btn-outline-dark')} btn-sm`} htmlFor="btnradio10">
-                            <FontAwesomeIcon icon={ faChartSimple }  />
-                        </label>
+                            
+                            <input 
+                                type="radio" 
+                                className="btn-check"
+                                name="btnradio2" 
+                                id="btnradio10" 
+                                autoComplete="off" 
+                                checked={( typeChart === "candlestick")}
+                                onClick={ e => { onChangeChart('candlestick') }}
+                            ></input>
+                            <label className={`btn ${(isMode ? 'btn-outline-light' : 'btn-outline-dark')} btn-sm`} htmlFor="btnradio10">
+                                <FontAwesomeIcon icon={ faChartSimple }  />
+                            </label>
+                        </div>
                     </div>
                 </div>
                     {
                         ( isLoading || isLoadingOHLC ) ? 
                             <LoaderChart />
                         : 
-                        <div>
+                        <div >
                             {
                                 ( typeChart === 'line' ) ?
                                 <ChartMarket data={ data } />

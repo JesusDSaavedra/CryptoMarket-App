@@ -9,14 +9,14 @@ export const Section = ({info}) => {
             <div className="row">
                 <div className="col-md-12">
                     <div className="row">
-                        <div className="col-md-12 px-5">
+                        <div className="col-md-12 px-3">
                             <FirstData info={info}/>
                             <Progress info={info}/>
                             <SecondData info={info}/>
                         </div>
                     </div>
-                </div>
                 <Chart info={info}/>
+                </div>
             </div>
         </div>
   )

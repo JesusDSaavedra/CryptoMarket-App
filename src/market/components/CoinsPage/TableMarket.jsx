@@ -61,39 +61,39 @@ export const TableMarket = ({coins, isLoading}) => {
       
       <div className="">
         <nav aria-label="Page navigation example">
-          <ul className="pagination justify-content-center">
+          <ul className="pagination justify-content-center pagination-sm">
             <li className={`page-item ${ page === '1' ? 'disabled' : ''}`}>
-              <a className="page-link" onClick={ e => onChangePage( parseInt(page) - 1 > 1 ? '1' : (parseInt(page) - 1).toString() )}>
+              <a className={`page-link ${ isMode ? 'bg-dark' : ''}`} onClick={ e => onChangePage( parseInt(page) - 1 > 1 ? '1' : (parseInt(page) - 1).toString() )}>
                 Previous
               </a>
             </li>
-            <li className="page-item">
-              <a className="page-link" href="#" onClick={ e => onChangePage('1') }>
+            <li className="page-item ">
+              <a className={`page-link ${ isMode ? 'bg-dark' : ''}`} href="#" onClick={ e => onChangePage('1') }>
                 1
               </a>
             </li>
             <li className="page-item">
-              <a className="page-link" href="#" onClick={ e => onChangePage('2') }>
+              <a className={`page-link ${ isMode ? 'bg-dark' : ''}`} href="#" onClick={ e => onChangePage('2') }>
                 2
               </a>
             </li>
             <li className="page-item">
-              <a className="page-link" href="#" onClick={ e => onChangePage('3') }>
+              <a className={`page-link ${ isMode ? 'bg-dark' : ''}`} href="#" onClick={ e => onChangePage('3') }>
                 3
               </a>
             </li>
             <li className="page-item">
-              <a className="page-link" href="#" onClick={ e => onChangePage('4') }>
+              <a className={`page-link ${ isMode ? 'bg-dark' : ''}`} href="#" onClick={ e => onChangePage('4') }>
                 4
               </a>
             </li>
-            {/* <li className="page-item">
-              <a className="page-link" href="#" onClick={ e => onChangePage('5') }>
+            <li className="page-item">
+              <a className={`page-link ${ isMode ? 'bg-dark' : ''}`} href="#" onClick={ e => onChangePage('5') }>
                 5
               </a>
-            </li> */}
-            <li className={`page-item ${ page === '4' ? 'disabled' : ''}`}>
-              <a className="page-link" href="#" onClick={ e => onChangePage( parseInt(page) + 1 > 4 ? '4' : (parseInt(page) + 1).toString() )}>
+            </li>
+            <li className={`page-item ${ page === '5' ? 'disabled' : ''}`}>
+              <a className={`page-link ${ isMode ? 'bg-dark' : ''}`} href="#" onClick={ e => onChangePage( parseInt(page) + 1 > 5 ? '5' : (parseInt(page) + 1).toString() )}>
                 Next
               </a>
             </li>

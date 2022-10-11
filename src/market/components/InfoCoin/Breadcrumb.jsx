@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 
 export const Breadcrumb = ({info}) => {
   return (
-    <div className='mx-5 mt-3'>
+    <div className='mx-1 mt-3'>
         <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
                 <li className="breadcrumb-item">

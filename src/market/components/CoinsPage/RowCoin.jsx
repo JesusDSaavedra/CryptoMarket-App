@@ -63,7 +63,7 @@ export const RowCoin = ({ coin }) => {
                     }
                 </small>
             </td>
-            <td className={`align-middle text-center ${coin && coin.change_porcentage_1h > 0 ? 'text-success' : 'text-danger'}`}>
+            <td className={`align-middle text-center ${coin && coin.change_porcentage_24h > 0 ? 'text-success' : 'text-danger'}`}>
                 <small className={` ${(coin && coin.porcentage24h > 0 ? 'text-success' : 'text-danger')}`}>
                     <FontAwesomeIcon 
                         icon={
@@ -79,7 +79,7 @@ export const RowCoin = ({ coin }) => {
                     }
                 </small>
             </td>
-            <td className={`align-middle text-center ${coin && coin.change_porcentage_1h > 0 ? 'text-success' : 'text-danger'}`}>
+            <td className={`align-middle text-center ${coin && coin.change_porcentage_7d > 0 ? 'text-success' : 'text-danger'}`}>
                 <small className={` ${(coin && coin.change_porcentage_7d > 0 ? 'text-success' : 'text-danger')}`}>
                     <FontAwesomeIcon 
                         icon={
@@ -109,7 +109,7 @@ export const RowCoin = ({ coin }) => {
                     }
                 </small>
             </td>
-            <td>
+            <td  className={`${coin && coin.change_porcentage_7d > 0 ? 'text-success' : 'text-danger'}`}>
                 <SparkLine7d coin={coin}/>
             </td>
         </tr>

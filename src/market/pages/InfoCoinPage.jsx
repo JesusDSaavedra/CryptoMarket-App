@@ -17,7 +17,7 @@ export const InfoCoinPage = () => {
                 <Loader />
             : 
 
-            <div className='p-4 ' style={ isMode ? {background: '#0d1117' } : {background: '#cccccc' }}>
+            <div className={`p-3 ${isMode ? 'bg-black' : 'bg-dark bg-opacity-10'} `}>
                 <div className={`container-fluid rounded-3 ${(isMode ? 'bg-dark' : 'bg-light')}`}>
                     <div className='row'>
                         <Breadcrumb info={info}/>

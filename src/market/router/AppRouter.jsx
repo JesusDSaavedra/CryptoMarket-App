@@ -12,7 +12,7 @@ export const AppRouter = () => {
   
 
   return (
-    <div style={ isMode ? {background: '#0d1117' } : {background: '#cccccc' }}>
+    <div className={`${isMode ? 'bg-black' : 'bg-dark bg-opacity-10'} `}>
         <NavBar info={info}/>
         <Routes>
             <Route path="coins" element={<CoinsPage/>}/>
